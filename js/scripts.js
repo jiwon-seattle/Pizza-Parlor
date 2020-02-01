@@ -1,46 +1,46 @@
 $(document).ready(function() {
-  $("#input-form").submit(function(event){
+  $("#userOption").submit(function(event){
     event.preventDefault();
-    var num = $("#user-input").val();
-    var number = parseInt(num)
+    $("input:checkbox[name=topping]:checked").each(function(){
+      var toppingselected = $(this).val();
+      topping.push(toppingselected)
 
-    var result= []
-    var integers = []
-    var beep = "Beep!"
-    var boop = "Boop!"
-    var sorry = "I'm sorry, Dave. I'm afraid I can't do that."
+    var size = $("input:radio[name=size]:checked").val();
+    console.log(size)
+    console.log(topping)
 
-    var one = /[1]/i;
-    var two = /[2]/i;
-    var three = /[3]/i;
+    var pizza = new Pizza(topping, size)
 
-    for (i = 0; i <= num; i++) {
-      if (i === 13) {
-        result.push("I'm sorry, Dave. I'm afraid I can't do that.")
-      } else if (i === 21) {
-        result.push(boop)
-      } else if (i === 32) {
-        result.push("I'm sorry, Dave. I'm afraid I can't do that.")
-      } else if (i === 0) {
-        result.push('"0"')
-      } else {
-          if (i.toString().match(one)) {
-            result.push(beep)
-          } else if (i.toString().match(two)) {
-            result.push(boop)
-          } else if (i.toString().match(three)) {
-            result.push(sorry)
-          } else {
-            result.push(i)
-          }
-      }
-    }
-
-    for (x=0; x <= number; x++) {
-      integers.push(x)
-    }
-    $("#numberResult").text(integers)
-    $("#notiResult").text(result)
-    
+    })
   });
+
+topping = []
+
+function PizzaOrder(topping, size){
+  this.pizza = []
+  this.size = size
+  this.cost = 0
+}
+
+function Pizza (topping, size) {
+  cost = 10
+  if (topping == "cheese") {
+    cost += 5
+  } else if (topping == "pepperoni") {
+    cost += 6
+  } else if (topping == "vegetable") {
+    cost += 3
+  } else if (topping == "artichoke") {
+    cost += 7
+  } return cost
+
+  if (size == "XLarge") {
+    cost += 5
+  } else if (size == "large") {
+    cost += 3
+  } else if (size == "small") {
+    cost -= 3
+  } return cost
+}
+
 });
