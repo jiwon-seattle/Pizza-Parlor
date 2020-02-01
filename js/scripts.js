@@ -4,43 +4,48 @@ $(document).ready(function() {
     $("input:checkbox[name=topping]:checked").each(function(){
       var toppingselected = $(this).val();
       topping.push(toppingselected)
+    })
 
     var size = $("input:radio[name=size]:checked").val();
     console.log(size)
     console.log(topping)
+    var cost = 10
 
-    var pizza = new Pizza(topping, size)
+    var pizzaOrder = new PizzaOrder(topping, size, cost)
+    console.log(pizzaOrder)
+    pizzaOrder.addOrder(cost)
+    console.log(pizzaOrder.cost)
 
-    })
   });
 
 topping = []
 
-function PizzaOrder(topping, size){
-  this.pizza = []
+function PizzaOrder(topping, size, cost){
+  this.topping = topping
   this.size = size
-  this.cost = 0
+  this.cost = cost
 }
 
-function Pizza (topping, size) {
-  cost = 10
-  if (topping == "cheese") {
-    cost += 5
-  } else if (topping == "pepperoni") {
-    cost += 6
-  } else if (topping == "vegetable") {
-    cost += 3
-  } else if (topping == "artichoke") {
-    cost += 7
-  } return cost
+PizzaOrder.prototype.addOrder = function(){
+  for (var i = 0; i <this.topping.length; i++) {
+  if (topping[i] == "cheese") {
+    this.cost += 5
+  } else if (this.topping[i] == "pepperoni") {
+    this.cost += 6
+  } else if (this.topping[i] == "vegetable") {
+    this.cost += 3
+  } else if (this.topping[i] == "artichoke") {
+    this.cost += 7
+  }
+}
 
-  if (size == "XLarge") {
-    cost += 5
-  } else if (size == "large") {
-    cost += 3
-  } else if (size == "small") {
-    cost -= 3
-  } return cost
+  if (this.size == "XLarge") {
+    this.cost += 5
+  } else if (this.size == "large") {
+    this.cost += 3
+  } else if (this.size == "small") {
+    this.cost -= 3
+  }
 }
 
 });
