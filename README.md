@@ -38,4 +38,4 @@ _Email jiwon1.han@gmail.com with any questions, comments, or concerns._
 
 *This software is licensed under the MIT license*
 
-Copyright (c) 2020 **_{Jiwon Han}_**
+Copyright (c) 2020 **_Jiwon Han_**
