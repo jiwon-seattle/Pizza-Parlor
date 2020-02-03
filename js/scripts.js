@@ -1,8 +1,5 @@
 //User Interface logic
 $(document).ready(function() {
-  // $("input:radio[name=size]").click(function(event) {
-  //   console.log("Radio Clicked!");
-  // });
   $("#userOption").submit(function(event){
     event.preventDefault();
     $("input:checkbox[name=topping]:checked").each(function(){
@@ -23,6 +20,8 @@ $(document).ready(function() {
     $("#costDetail").text(pizzaOrder.cost)
   });
 //end of interface logic
+
+//Bubusiness logic
 var cost = 10 //basic
 topping = []
 
@@ -53,5 +52,5 @@ PizzaOrder.prototype.addOrder = function(){
     this.cost -= 3
   }
 }
-
+//end of business logic
 });
