@@ -1,56 +1,10 @@
-img {
+#orderComplete {
+  display: none;
+}
+
+#orderInfo {
   width: 300px;
-}
-
-#result-sql {
-  display: none;
-  border: 2px solid black;
-  padding: 4px;
-}
-
-#result-python {
-  display: none;
-  border: 2px solid black;
-  padding: 4px;
-}
-
-#result-javascript {
-  display: none;
-  border: 2px solid black;
-  padding: 4px;
-}
-
-#result-intro {
-  display: none;
-}
-
-#language {
-  display: none;
-}
-
-#result-long {
-  display: none;
-}
-
-.jumbotron {
-  background-color: white;
-}
-
-#lan {
-  width: 500px;
-  height: 450px;
-  float: right;
-}
-
-#start {
-  background-color: white;
-  font-size: 20px;
-  border: 2px solid black;
-}
-
-#sub {
-  background: black;
-  font-size: 16px;
-  border: 2px solid white;
-  color: white;
+  border: 10px solid red;
+  padding: 10px;
+  margin: 10px;
 }

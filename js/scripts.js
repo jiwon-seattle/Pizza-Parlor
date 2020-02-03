@@ -1,3 +1,4 @@
+//User Interface logic
 $(document).ready(function() {
   $("#userOption").submit(function(event){
     event.preventDefault();
@@ -7,17 +8,21 @@ $(document).ready(function() {
     })
 
     var size = $("input:radio[name=size]:checked").val();
-    console.log(size)
-    console.log(topping)
-    var cost = 10
-
     var pizzaOrder = new PizzaOrder(topping, size, cost)
-    console.log(pizzaOrder)
-    pizzaOrder.addOrder(cost)
+
+    pizzaOrder.addOrder()
     console.log(pizzaOrder.cost)
 
+    $('#userOption').hide()
+    $("#orderComplete").show()
+    $('#pizzaDetail').text(pizzaOrder.topping)
+    $("#sizeDetail").text(pizzaOrder.size)
+    $("#costDetail").text(pizzaOrder.cost)
   });
+//end of interface logic
 
+//Bubusiness logic
+var cost = 10 //basic
 topping = []
 
 function PizzaOrder(topping, size, cost){
@@ -28,24 +33,24 @@ function PizzaOrder(topping, size, cost){
 
 PizzaOrder.prototype.addOrder = function(){
   for (var i = 0; i <this.topping.length; i++) {
-  if (topping[i] == "cheese") {
+  if (topping[i] == "Cheese") {
     this.cost += 5
-  } else if (this.topping[i] == "pepperoni") {
+  } else if (this.topping[i] == "Pepperoni") {
     this.cost += 6
-  } else if (this.topping[i] == "vegetable") {
+  } else if (this.topping[i] == "Meat") {
     this.cost += 3
-  } else if (this.topping[i] == "artichoke") {
+  } else if (this.topping[i] == "Combination") {
     this.cost += 7
   }
 }
 
   if (this.size == "XLarge") {
     this.cost += 5
-  } else if (this.size == "large") {
+  } else if (this.size == "Large") {
     this.cost += 3
-  } else if (this.size == "small") {
+  } else if (this.size == "Small") {
     this.cost -= 3
   }
 }
-
+//end of business logic
 });

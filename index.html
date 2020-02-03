@@ -8,22 +8,52 @@
     <title>Pizza order</title>
   </head>
   <body>
-    <div class="container">
+    <div class="jumbotron">
+        <h1>Pizza Parlor</h1>
+        <h3>Welcome to Pizza Parlor. You can order a pizza that you'd like</h2>
+        <h3>Please select topping(s) and size and enjoy! </h3>
+    </div>
       <form id="userOption">
-        <p>Please select topping<p>
-          <input type="checkbox" name="topping" value="cheese">Cheese<br>
-          <input type="checkbox" name="topping" value="pepperoni">Pepperoni</br>
-          <input type="checkbox" name="topping" value="vegetable">Vegetable</br>
-          <input type="checkbox" name="topping" value="artichoke">Antichoke
+      <div class="row">
+        <div class="col-md-7">
+        <h3>Please select topping</h3>
+          <h4>Cheese Pizza</h4>
+          <h6>Your favorite cheese pizza made with classic marinara sauce topped with mozzarella cheese. <br>Order pizza online now.<h6>
+          <img src="https://www.pizzahut.com/assets/w/tile/thor/pizza_Cheese.png"><br>
+          <input type="checkbox" name="topping" value="Cheese">Cheese
+          <h4>Pepperoni Pizza</h4>
+          <h6>This gourmet pizza is ideal for easy late night delivery, complete with mozzarella cheese and pepperoni. <br>Order pizza online now.</h6>
+          <img src="https://www.pizzahut.com/assets/w/tile/thor/pizza_Pepperoni.png"><br>
+          <input type="checkbox" name="topping" value="Pepperoni">Pepperoni
+          <h4>Meat Pizza</h4>
+          <h6>Meat lover's pizza is the perfect game day pizza, packed with pepperoni, Italian sausage, ham, bacon, seasoned pork and beef. Order pizza online now.</h6>
+          <img src="https://www.pizzahut.com/assets/w/tile/thor/pizza_Meat_Lovers.png"><br>
+          <input type="checkbox" name="topping" value="Meat">Meat
+          <h4>Combination Pizza</h4>
+          <h6>Enjoy this freshly prepared pizza for family dinner or a group lunch, including pepperoni, seasoned pork, beef, mushrooms, green bell peppers and red onions. Order pizza online now.</h6>
+          <img src="https://www.pizzahut.com/assets/w/tile/thor/pizza_Supreme.png"><br>
+          <input type="checkbox" name="topping" value="Combination">Combination
+        </div>
 
-
-        <p>Please select size<p>
-          <input type="radio" name="size" value="xLarge">XL<br>
-          <input type="radio" name="size" value="large">Large<br>
-          <input type="radio" name="size" value="medium">Medium<br>
-          <input type="radio" name="size" value="small">Small<br>
-          <button id="pizzaOrder">Click to complete</button>
+        <div class-"col-md-4">
+        <h3>Please select size</h3>
+          <input type="radio" name="size" value="XLarge">XLarge<br>
+          <input type="radio" name="size" value="Large">Large<br>
+          <input type="radio" name="size" value="Medium">Medium<br>
+          <input type="radio" name="size" value="Small">Small<br>
+          <br>
+          <br>
+          <button class="btn btn-danger btn-lg" id="pizzaOrder">Click to complete</button>
+        </div>
+      </div>
       </form>
-      <p id="pizzaTopping"></p>
+        <div id="orderComplete">
+          <h2>Thank you for ordering! Your pizza will be delivered in 30 minutes.</h2>
+          <div id="orderInfo">
+            <h3><span id="pizzaDetail"></span> Pizza.</h3>
+            <h3><span id="sizeDetail"></span> Size.</h3>
+            <h3>Total is $<strong><span id="costDetail"></span></strong>.</h3>
+        </div>
+      </div>
   </body>
 </html>
