@@ -18,7 +18,7 @@ A website created with object oriented JavaScript and HTML where a user can orde
 
 ## Setup/Installation Requirements
 
-1. Clone this repository.
+1. Clone this repository, https://github.com/jiwon-seattle/Pizza-Parlor.git.
 2. On your browser, navigate ordering pizza and enjoy!
 
 ## Known Bugs
