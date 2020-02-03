@@ -19,6 +19,7 @@ $(document).ready(function() {
     $("#sizeDetail").text(pizzaOrder.size)
     $("#costDetail").text(pizzaOrder.cost)
   });
+});
 //end of interface logic
 
 //Bubusiness logic
@@ -53,4 +54,3 @@ PizzaOrder.prototype.addOrder = function(){
   }
 }
 //end of business logic
-});
