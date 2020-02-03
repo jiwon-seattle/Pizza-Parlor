@@ -12,9 +12,9 @@ A website created with object oriented JavaScript and HTML where a user can orde
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program allows the user to choose toppings and size for the pizza they'd like to order** | Topping options: "Cheese", "Pepperoni", "Vegetable" | Output: "Cheese" |
-| **Program allows the user to choose pizza size**| Size options: "XL", "L", "M", "S" | Output: "M" |
-| **Program returns total cost of the pizza based on user's selection**| Input: "Cheese", "M" | Output: "$15" |
+| **Program allows the user to choose toppings and size for the pizza they'd like to order** | Topping options: "Cheese", "Pepperoni", "Meat" | Output: "Cheese" |
+| **Program allows the user to choose pizza size**| Size options: "XLarge", "Large", "Medium", "Small" | Output: "Medium" |
+| **Program returns total cost of the pizza based on user's selection**| Input: "Cheese", "Medium" | Output: "$15" |
 
 ## Setup/Installation Requirements
 
