@@ -1,13 +1,13 @@
 //User Interface logic
 $(document).ready(function() {
   $("#userOption").submit(function(event){
-    event.preventDefault();
+    event.preventDefault()
     $("input:checkbox[name=topping]:checked").each(function(){
-      var toppingselected = $(this).val();
+      var toppingselected = $(this).val()
       topping.push(toppingselected)
     })
 
-    var size = $("input:radio[name=size]:checked").val();
+    var size = $("input:radio[name=size]:checked").val()
     var pizzaOrder = new PizzaOrder(topping, size, cost)
 
     pizzaOrder.addOrder()
@@ -18,8 +18,8 @@ $(document).ready(function() {
     $('#pizzaDetail').text(pizzaOrder.topping)
     $("#sizeDetail").text(pizzaOrder.size)
     $("#costDetail").text(pizzaOrder.cost)
-  });
-});
+  })
+})
 //end of interface logic
 
 //Bubusiness logic
